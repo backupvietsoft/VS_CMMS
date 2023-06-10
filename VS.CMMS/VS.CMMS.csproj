@@ -1,0 +1,684 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{03C97B24-D9FD-43CA-843A-2D1906ABCEC7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VS.CMMS</RootNamespace>
+    <AssemblyName>VS.CMMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Components\Bin\Framework\DevExpress.BonusSkins.v22.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Components\Bin\Framework\DevExpress.Data.Desktop.v22.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Components\Bin\Framework\DevExpress.Data.v22.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Components\Bin\Framework\DevExpress.Drawing.v22.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Components\Bin\Framework\DevExpress.Printing.v22.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Components\Bin\Framework\DevExpress.Sparkline.v22.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.TreeMap.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Components\Bin\Framework\DevExpress.Utils.v22.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v22.2.UI, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Components\Bin\Framework\DevExpress.Utils.v22.2.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Components\Bin\Framework\DevExpress.XtraBars.v22.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Components\Bin\Framework\DevExpress.XtraEditors.v22.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Components\Bin\Framework\DevExpress.XtraGrid.v22.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Components\Bin\Framework\DevExpress.XtraLayout.v22.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\12.Code-HRM\01.HRM\08.Payroll\Vs.Payroll\bin\Debug\DevExpress.XtraPivotGrid.v22.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Components\Bin\Framework\DevExpress.XtraReports.v22.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v22.2.Core.Desktop, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v22.2.UI, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Facebook.7.0.10-beta\lib\net45\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Text.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="VS.Com, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\03.ERP\01.Code\01.VS.ERP\VS.ERP\bin\Release\VS.Com.dll</HintPath>
+    </Reference>
+    <Reference Include="VS.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\VS.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Vs.Support, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Vs.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="ZaloDotNetSDK, Version=1.1.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\vng.zalo.ZaloDotNetSDK.1.1.9\lib\net452\ZaloDotNetSDK.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="00.Class\VsMain.cs" />
+    <Compile Include="01.Systems\frmChangeTheme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01.Systems\frmChangeTheme.Designer.cs">
+      <DependentUpon>frmChangeTheme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01.Systems\frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01.Systems\frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01.Systems\frmThongTinChung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01.Systems\frmThongTinChung.Designer.cs">
+      <DependentUpon>frmThongTinChung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01.Systems\frmXacNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01.Systems\frmXacNhan.Designer.cs">
+      <DependentUpon>frmXacNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmHuHong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmHuHong.designer.cs">
+      <DependentUpon>frmHuHong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditNNDungMay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditNNDungMay.Designer.cs">
+      <DependentUpon>frmEditNNDungMay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditLoaiNNDM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditLoaiNNDM.Designer.cs">
+      <DependentUpon>frmEditLoaiNNDM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditCongViecGSTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditCongViecGSTT.Designer.cs">
+      <DependentUpon>frmEditCongViecGSTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmCongViecGSTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmCongViecGSTT.Designer.cs">
+      <DependentUpon>frmCongViecGSTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmCongViecBT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmCongViecBT.Designer.cs">
+      <DependentUpon>frmCongViecBT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditBacTho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditBacTho.Designer.cs">
+      <DependentUpon>frmEditBacTho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditCongViecBT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditCongViecBT.Designer.cs">
+      <DependentUpon>frmEditCongViecBT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmDDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmDDiem.Designer.cs">
+      <DependentUpon>frmDDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmDMVTPT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmDMVTPT.Designer.cs">
+      <DependentUpon>frmDMVTPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditBPChiuPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditBPChiuPhi.Designer.cs">
+      <DependentUpon>frmEditBPChiuPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditDonViTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditDonViTinh.Designer.cs">
+      <DependentUpon>frmEditDonViTinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditDonVi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditDonVi.Designer.cs">
+      <DependentUpon>frmEditDonVi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditDonViTinhRT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditDonViTinhRT.Designer.cs">
+      <DependentUpon>frmEditDonViTinhRT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditDonViDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditDonViDo.Designer.cs">
+      <DependentUpon>frmEditDonViDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditKhoViTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditKhoViTri.Designer.cs">
+      <DependentUpon>frmEditKhoViTri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditMucUuTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditMucUuTien.Designer.cs">
+      <DependentUpon>frmEditMucUuTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditLoaiPT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditLoaiPT.Designer.cs">
+      <DependentUpon>frmEditLoaiPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditLoaiCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditLoaiCV.Designer.cs">
+      <DependentUpon>frmEditLoaiCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditLoaiMay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditLoaiMay.Designer.cs">
+      <DependentUpon>frmEditLoaiMay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditNguoiDung.Designer.cs">
+      <DependentUpon>frmEditNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditLoaiBaoTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditLoaiBaoTri.Designer.cs">
+      <DependentUpon>frmEditLoaiBaoTri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditKho.Designer.cs">
+      <DependentUpon>frmEditKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditNhaCungCap.Designer.cs">
+      <DependentUpon>frmEditNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditQuocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditQuocGia.Designer.cs">
+      <DependentUpon>frmEditQuocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditHangSanXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditHangSanXuat.Designer.cs">
+      <DependentUpon>frmEditHangSanXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditQuanHuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditQuanHuyen.Designer.cs">
+      <DependentUpon>frmEditQuanHuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditHuHong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditHuHong.Designer.cs">
+      <DependentUpon>frmEditHuHong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmHuHongView_Chon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmHuHongView_Chon.Designer.cs">
+      <DependentUpon>frmHuHongView_Chon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmTestZalo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmTestZalo.Designer.cs">
+      <DependentUpon>frmTestZalo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditThanhPho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditThanhPho.Designer.cs">
+      <DependentUpon>frmEditThanhPho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditDiaDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditDiaDiem.Designer.cs">
+      <DependentUpon>frmEditDiaDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditTo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditTo.Designer.cs">
+      <DependentUpon>frmEditTo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditPhongBan.Designer.cs">
+      <DependentUpon>frmEditPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditNhomMay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditNhomMay.Designer.cs">
+      <DependentUpon>frmEditNhomMay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditNhomNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditNhomNguoiDung.Designer.cs">
+      <DependentUpon>frmEditNhomNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditTienTe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditTienTe.Designer.cs">
+      <DependentUpon>frmEditTienTe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditTienTeTG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditTienTeTG.Designer.cs">
+      <DependentUpon>frmEditTienTeTG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmKho.Designer.cs">
+      <DependentUpon>frmKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmView.designer.cs">
+      <DependentUpon>frmView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04.Usage\frmDSNgungMay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04.Usage\frmDSNgungMay.Designer.cs">
+      <DependentUpon>frmDSNgungMay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04.Usage\frmThoiGianDungMay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04.Usage\frmThoiGianDungMay.Designer.cs">
+      <DependentUpon>frmThoiGianDungMay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01.Systems\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01.Systems\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChung.Designer.cs">
+      <DependentUpon>frmChung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="01.Systems\frmChangeTheme.resx">
+      <DependentUpon>frmChangeTheme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01.Systems\frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01.Systems\frmThongTinChung.resx">
+      <DependentUpon>frmThongTinChung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01.Systems\frmXacNhan.resx">
+      <DependentUpon>frmXacNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmHuHong.resx">
+      <DependentUpon>frmHuHong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditNNDungMay.resx">
+      <DependentUpon>frmEditNNDungMay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditLoaiNNDM.resx">
+      <DependentUpon>frmEditLoaiNNDM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditCongViecGSTT.resx">
+      <DependentUpon>frmEditCongViecGSTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmCongViecGSTT.resx">
+      <DependentUpon>frmCongViecGSTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmCongViecBT.resx">
+      <DependentUpon>frmCongViecBT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditBacTho.resx">
+      <DependentUpon>frmEditBacTho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditCongViecBT.resx">
+      <DependentUpon>frmEditCongViecBT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmDDiem.resx">
+      <DependentUpon>frmDDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmDMVTPT.resx">
+      <DependentUpon>frmDMVTPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditBPChiuPhi.resx">
+      <DependentUpon>frmEditBPChiuPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditDonViTinh.resx">
+      <DependentUpon>frmEditDonViTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditDonVi.resx">
+      <DependentUpon>frmEditDonVi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditDonViTinhRT.resx">
+      <DependentUpon>frmEditDonViTinhRT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditDonViDo.resx">
+      <DependentUpon>frmEditDonViDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditKhoViTri.resx">
+      <DependentUpon>frmEditKhoViTri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditMucUuTien.resx">
+      <DependentUpon>frmEditMucUuTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditLoaiPT.resx">
+      <DependentUpon>frmEditLoaiPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditLoaiCV.resx">
+      <DependentUpon>frmEditLoaiCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditLoaiMay.resx">
+      <DependentUpon>frmEditLoaiMay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditNguoiDung.resx">
+      <DependentUpon>frmEditNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditLoaiBaoTri.resx">
+      <DependentUpon>frmEditLoaiBaoTri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditKho.resx">
+      <DependentUpon>frmEditKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditNhaCungCap.resx">
+      <DependentUpon>frmEditNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditQuocGia.resx">
+      <DependentUpon>frmEditQuocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditHangSanXuat.resx">
+      <DependentUpon>frmEditHangSanXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditQuanHuyen.resx">
+      <DependentUpon>frmEditQuanHuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditHuHong.resx">
+      <DependentUpon>frmEditHuHong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmHuHongView_Chon.resx">
+      <DependentUpon>frmHuHongView_Chon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmTestZalo.resx">
+      <DependentUpon>frmTestZalo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditThanhPho.resx">
+      <DependentUpon>frmEditThanhPho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditDiaDiem.resx">
+      <DependentUpon>frmEditDiaDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditTo.resx">
+      <DependentUpon>frmEditTo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditPhongBan.resx">
+      <DependentUpon>frmEditPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditNhomMay.resx">
+      <DependentUpon>frmEditNhomMay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditNhomNguoiDung.resx">
+      <DependentUpon>frmEditNhomNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditTienTe.resx">
+      <DependentUpon>frmEditTienTe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditTienTeTG.resx">
+      <DependentUpon>frmEditTienTeTG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmKho.resx">
+      <DependentUpon>frmKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmView.resx">
+      <DependentUpon>frmView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\XtraForm1.resx">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04.Usage\frmDSNgungMay.resx">
+      <DependentUpon>frmDSNgungMay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04.Usage\frmThoiGianDungMay.resx">
+      <DependentUpon>frmThoiGianDungMay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01.Systems\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChung.resx">
+      <DependentUpon>frmChung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\z3723695411625_2ea2b20c85ef91dd72f94eeab0950bc9.rar" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="bin\Debug\VS.Data.dll" />
+    <Analyzer Include="bin\Debug\Vs.Support.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\2703079-32.png" />
+    <Content Include="Resources\ICON 3.ico" />
+    <Content Include="Resources\icon ico.ico" />
+    <Content Include="Resources\icon old.png" />
+    <Content Include="Resources\ICON-ERP.ico" />
+    <Content Include="Resources\ICON.ico" />
+    <Content Include="Resources\ICON.png" />
+    <Content Include="Resources\iconExit.png" />
+    <Content Include="Resources\iconNosave.png" />
+    <Content Include="Resources\iconsave.png" />
+    <Content Include="Resources\iconsua.png" />
+    <Content Include="Resources\iconthem.png" />
+    <Content Include="Resources\iconxoa.png" />
+    <Content Include="Resources\icon_category.png" />
+    <Content Include="Resources\icon_data.png" />
+    <Content Include="Resources\icon_data1.png" />
+    <Content Include="Resources\icon_dmuc.png" />
+    <Content Include="Resources\icon_erp.png" />
+    <Content Include="Resources\icon_erp2.jpg" />
+    <Content Include="Resources\icon_erp3.jpg" />
+    <Content Include="Resources\icon_erp4.jpg" />
+    <Content Include="Resources\icon_home.png" />
+    <Content Include="Resources\icon_hthong.png" />
+    <Content Include="Resources\icon_pass.png" />
+    <Content Include="Resources\icon_pass1.png" />
+    <Content Include="Resources\icon_user.png" />
+    <Content Include="Resources\icon_user1.png" />
+    <Content Include="Resources\MainForm.jpg" />
+    <Content Include="Resources\mhc - Copy.jpg" />
+    <Content Include="Resources\mhc.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
