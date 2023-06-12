@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VS.ERP
 {
-    public partial class frmThoiGianDungMay : DevExpress.XtraEditors.XtraForm
+    public partial class frmThoiGianChayMay : DevExpress.XtraEditors.XtraForm
     {
-        public frmThoiGianDungMay()
+        public frmThoiGianChayMay()
         {
             InitializeComponent();
         }

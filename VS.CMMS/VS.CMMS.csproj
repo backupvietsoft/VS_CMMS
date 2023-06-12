@@ -45,10 +45,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Components\Bin\Framework\DevExpress.Data.v22.2.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.DataAccess.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Docs.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Components\Bin\Framework\DevExpress.Drawing.v22.2.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Office.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Components\Bin\Framework\DevExpress.Printing.v22.2.Core.dll</HintPath>
@@ -58,6 +61,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Components\Bin\Framework\DevExpress.Sparkline.v22.2.Core.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.TreeMap.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -98,6 +102,10 @@
     <Reference Include="DevExpress.XtraTreeList.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeMap.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeMap.v22.2.UI, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EPPlus, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\EPPlus.dll</HintPath>
+    </Reference>
     <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
       <HintPath>..\packages\Facebook.7.0.10-beta\lib\net45\Facebook.dll</HintPath>
     </Reference>
@@ -113,7 +121,31 @@
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
+    <Reference Include="Spire.License, Version=1.3.5.35, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.XLS, Version=7.9.0.55035, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Spire.XLS.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -138,10 +170,6 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="UIAutomationClient" />
-    <Reference Include="VS.Com, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\03.ERP\01.Code\01.VS.ERP\VS.ERP\bin\Release\VS.Com.dll</HintPath>
-    </Reference>
     <Reference Include="VS.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\VS.Data.dll</HintPath>
@@ -180,6 +208,18 @@
     </Compile>
     <Compile Include="01.Systems\frmXacNhan.Designer.cs">
       <DependentUpon>frmXacNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmDMVTPTView_Chon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmDMVTPTView_Chon.Designer.cs">
+      <DependentUpon>frmDMVTPTView_Chon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.Catalogs\frmEditCa.Designer.cs">
+      <DependentUpon>frmEditCa.cs</DependentUpon>
     </Compile>
     <Compile Include="02.Catalogs\frmHuHong.cs">
       <SubType>Form</SubType>
@@ -427,11 +467,23 @@
     <Compile Include="02.Catalogs\XtraForm1.Designer.cs">
       <DependentUpon>XtraForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="04.Usage\frmDSNgungMay.cs">
+    <Compile Include="formChung\frmImport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="04.Usage\frmDSNgungMay.Designer.cs">
-      <DependentUpon>frmDSNgungMay.cs</DependentUpon>
+    <Compile Include="formChung\frmImport.Designer.cs">
+      <DependentUpon>frmImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04.Usage\frmThoiGianChayMay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04.Usage\frmThoiGianChayMay.Designer.cs">
+      <DependentUpon>frmThoiGianChayMay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04.Usage\frmThoiGianDungMayView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04.Usage\frmThoiGianDungMayView.Designer.cs">
+      <DependentUpon>frmThoiGianDungMayView.cs</DependentUpon>
     </Compile>
     <Compile Include="04.Usage\frmThoiGianDungMay.cs">
       <SubType>Form</SubType>
@@ -450,6 +502,12 @@
     </Compile>
     <Compile Include="01.Systems\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formChung\frmImportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formChung\frmImportView.Designer.cs">
+      <DependentUpon>frmImportView.cs</DependentUpon>
     </Compile>
     <Compile Include="frmChung.cs">
       <SubType>Form</SubType>
@@ -470,6 +528,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="01.Systems\frmXacNhan.resx">
       <DependentUpon>frmXacNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmDMVTPTView_Chon.resx">
+      <DependentUpon>frmDMVTPTView_Chon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.Catalogs\frmEditCa.resx">
+      <DependentUpon>frmEditCa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="02.Catalogs\frmHuHong.resx">
       <DependentUpon>frmHuHong.cs</DependentUpon>
@@ -594,17 +658,27 @@
     <EmbeddedResource Include="02.Catalogs\XtraForm1.resx">
       <DependentUpon>XtraForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="04.Usage\frmDSNgungMay.resx">
-      <DependentUpon>frmDSNgungMay.cs</DependentUpon>
+    <EmbeddedResource Include="formChung\frmImport.resx">
+      <DependentUpon>frmImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04.Usage\frmThoiGianChayMay.resx">
+      <DependentUpon>frmThoiGianChayMay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04.Usage\frmThoiGianDungMayView.resx">
+      <DependentUpon>frmThoiGianDungMayView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="04.Usage\frmThoiGianDungMay.resx">
       <DependentUpon>frmThoiGianDungMay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="01.Systems\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formChung\frmImportView.resx">
+      <DependentUpon>frmImportView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChung.resx">
       <DependentUpon>frmChung.cs</DependentUpon>
@@ -672,7 +746,12 @@
     <Content Include="Resources\mhc - Copy.jpg" />
     <Content Include="Resources\mhc.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\02.VS.Com\VS.Com\VS.Com.csproj">
+      <Project>{375704a9-ba2d-4325-aa66-2fdd8ee246ca}</Project>
+      <Name>VS.Com</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

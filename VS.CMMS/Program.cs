@@ -1,15 +1,8 @@
-﻿using DevExpress.Skins;
-using DevExpress.UserSkins;
-using DevExpress.XtraEditors;
-using DXApplication1;
+﻿using DevExpress.XtraEditors;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-using VS.ERP;
 
 namespace VS.CMMS
 {
@@ -56,14 +49,15 @@ namespace VS.CMMS
 
 
                 //Com.Mod.Username = "sa";
-                Com.Mod.Database = "VS_CMMS";
+                //Com.Mod.Database = "VS_CMMS";
+
 
                 //Com.Mod.Server = @"192.168.2.8\sql2016";
                 //Com.Mod.Password = "codaikadaiku";
 
                 ////////////Com.Mod.UserDB = @"sa";
                 ////////////Com.Mod.Server = @"DESKTOP-G3G3EKE";
-                //////// Com.Mod.Database = @"VS_CMMS";
+               //////// Com.Mod.Database = @"VS_CMMS";
                 Com.Mod.Database = @"VS_CMMS";
                 ////////////Com.Mod.Password = @"123";
 
@@ -94,11 +88,48 @@ namespace VS.CMMS
                 DevExpress.UserSkins.BonusSkins.Register();
                 DevExpress.Skins.SkinManager.EnableFormSkins();
                 LogIn();
+                //Application.Run(new frmThoiGianChayMay(1));
                 //Application.Run(new frmThoiGianDungMay(1));
-                //Application.Run(new frmDSNgungMay());
                 //Application.Run(new Form1());
                 //Application.Run(new frmMain());
+                //Application.Run(new frmQuanLyBaoGoi(1));
+                //Application.Run(new frmXacNhanDonHangBan(1));
+                //Application.Run(new frmDuyetTaiLieu(1));
+                //Application.Run(new frmDuyetTemplate(1));
 
+
+                //Application.Run(new frmMRPChon(1));
+                //Application.Run(new frmCapNhapDuLieuHangHoa());
+
+                //Application.Run(new Form1());
+                //Application.Run(new frmHangHoaImport());
+                //Application.Run(new frmDangNhap(0));
+                //Application.Run(new frmDonHangBan(1));
+                //Application.Run(new frmPhanQuyenChucNang());
+                //Application.Run(new frmView());
+
+                //Application.Run(new frmDoiTacKD(1)
+                //Application.Run(new frmBangMau(1));
+                //Application.Run(new frmBOM(1));
+                //Application.Run(new frmHangHoa(1));
+                //Application.Run(new frmDoiTacKD(1));
+                //Application.Run(new frmDieuChinhDinhMuc(1));
+                //Application.Run(new frmPhieuNhapKho(1));
+                //Application.Run(new frmToHopHangHoa(1));
+                //Application.Run(new frmHangHoa(1));
+                //Application.Run(new frmPhanBoOrderNM(1));
+                //Application.Run(new frmSuDungHangTonKho(1));
+                //Application.Run(new frmChiPhiSanXuatThang(1));
+                //Application.Run(new frmKiemKeHangHoa(1));
+                //Application.Run(new frmKho(1));
+                //Application.Run(new frmPackingList_KeHoach(1));
+                //Application.Run(new frmPackinglist());
+
+                //frmView frm = new frmView(1, "-1", "spDanhMuc");
+                //Com.Mod.sPS = "mnuThanhPhanVai";
+                //frm.Name = "frmThanhPhanVai";
+                //frm.Tag = "mnuThanhPhanVai";
+                //Application.Run(frm);
 
             }
             catch (Exception ex)
@@ -115,7 +146,9 @@ namespace VS.CMMS
             ///Application.Run(new frmNguyenNhanHH()); 
 
             ////frmDangNhap frm = new frmDangNhap(0);
-            ////int widthRatio = Screen.PrimaryScreen.Bounds.Width / 3;
+            ////int widthRatio = Screen.PrimaryScreen.Boun
+            ///
+            /// .Width / 3;
             ////int heightRatio = Screen.PrimaryScreen.Bounds.Height / 3;
 
             ////frm.Size = new Size(widthRatio + (widthRatio / 4), heightRatio + (heightRatio / 4));

@@ -108,7 +108,7 @@ namespace VS.ERP
             lPar.Add(new SqlParameter("@iCot1", cboDiaDiem.EditValue));
             lPar.Add(new SqlParameter("@iCot2", cboLoaiMay.EditValue));
             lPar.Add(new SqlParameter("@UName", Com.Mod.UName));
-            dt = VsMain.MGetDatatable("spThoiGianDungMay", lPar);
+            dt = VsMain.MGetDatatable("spThoiGianDungChayMay", lPar);
             if (grdDSNgungMay.DataSource == null)
             {
                 Com.Mod.OS.MLoadXtraGrid(grdDSNgungMay, grvDSNgungMay, dt, false, true, true, true, true, this.Name);
